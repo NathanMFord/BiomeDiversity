@@ -25,6 +25,7 @@ public class FluidFactory {
         wrapper.add( new FluidWrapper( "junglewater", "fluid_blank" ).setViscosity( 500 ).setColour( new Color( 59, 74, 15, 250 ) ).setRarity( Rarity.UNCOMMON ).build() );
         wrapper.add( new FluidWrapper( "moltenorinocite", "molten_metal" ).setViscosity( 15000 ).setLuminosity( 10 ).setColour( new Color( 70, 166, 41, 255 ) ).setRarity( Rarity.COMMON ).build() );
 
+        wrapper.add( new FluidWrapper( "witheressence", "fluid_blank" ).setViscosity( 500 ).setColour(new Color( 20, 20, 20, 255 ) ).setRarity( Rarity.RARE ).build() );
     }
 
 /*

@@ -20,6 +20,7 @@ public class ModFluids {
     @ObjectHolder( "junglewater" ) public static FlowingFluid JUNGLEWATER;               //          Jungle Biome
     @ObjectHolder( "moltenorinocite" ) public static FlowingFluid MOLTENORINOCITE;       //          Melted Ore
 
+    @ObjectHolder( "witheressence" ) public static FlowingFluid WITHERESSENCE;
 
     //public static BdFluid natural;
     //public static BdFluid diluteNatural;
