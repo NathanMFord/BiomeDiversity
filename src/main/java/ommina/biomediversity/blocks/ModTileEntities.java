@@ -12,6 +12,7 @@ import ommina.biomediversity.blocks.plug.TileEntityPlugBase;
 import ommina.biomediversity.blocks.plug.energy.TileEntityPlugEnergy;
 import ommina.biomediversity.blocks.rainbarrel.TileEntityRainBarrel;
 import ommina.biomediversity.blocks.receiver.TileEntityReceiver;
+import ommina.biomediversity.blocks.sappers.wither.TileEntityWitherEssenceSapper;
 import ommina.biomediversity.blocks.transmitter.TileEntityTransmitter;
 
 @ObjectHolder( BiomeDiversity.MODID )
@@ -24,6 +25,7 @@ public class ModTileEntities {
     @ObjectHolder( "peltier" ) public static TileEntityType<TileEntityPeltier> PELTIER;
     @ObjectHolder( "rainbarrel" ) public static TileEntityType<TileEntityRainBarrel> RAIN_BARREL;
     @ObjectHolder( "plug_energy" ) public static TileEntityType<TileEntityPlugBase> PLUG;
+    @ObjectHolder( "wither_essence_sapper" ) public static TileEntityType<TileEntityWitherEssenceSapper> WITHER_ESSENCE_SAPPER;
 
     @SubscribeEvent
     public static void register( final RegistryEvent.Register<TileEntityType<?>> event ) {
@@ -34,6 +36,7 @@ public class ModTileEntities {
         event.getRegistry().register( TileEntityType.Builder.create( TileEntityPeltier::new, ModBlocks.PELTIER ).build( null ).setRegistryName( "peltier" ) );
         event.getRegistry().register( TileEntityType.Builder.create( TileEntityRainBarrel::new, ModBlocks.RAIN_BARREL ).build( null ).setRegistryName( "rainbarrel" ) );
         event.getRegistry().register( TileEntityType.Builder.create( TileEntityPlugEnergy::new, ModBlocks.PLUG_ENERGY ).build( null ).setRegistryName( "plug_energy" ) );
+        event.getRegistry().register( TileEntityType.Builder.create( TileEntityWitherEssenceSapper::new, ModBlocks.WITHER_ESSENCE_SAPPER ).build(null ).setRegistryName( "wither_essence_sapper" ) );
 
     }
 

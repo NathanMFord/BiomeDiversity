@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "biomediversity",
+  "pattern": [
+    "pnp",
+    " e ",
+    "pbp"
+  ],
+  "key": {
+    "p": {
+      "item": "biomediversity:orinocite_plate_thin"
+    },
+    "n": {
+      "item": "minecraft:nether_star"
+    },
+    "e": {
+      "item": "biomediversity:essence_sapper_base"
+    },
+    "b": {
+      "item": "biomediversity:machine_base"
+    }
+  },
+  "result": {
+    "item": "biomediversity:wither_essence_sapper",
+    "count": 1
+  }
+}

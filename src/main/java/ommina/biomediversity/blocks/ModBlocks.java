@@ -24,6 +24,8 @@ import ommina.biomediversity.blocks.plug.energy.PlugEnergyContainer;
 import ommina.biomediversity.blocks.rainbarrel.RainBarrel;
 import ommina.biomediversity.blocks.receiver.Receiver;
 import ommina.biomediversity.blocks.receiver.ReceiverContainer;
+import ommina.biomediversity.blocks.sappers.wither.WitherEssenceSapper;
+import ommina.biomediversity.blocks.sappers.wither.WitherEssenceSapperContainer;
 import ommina.biomediversity.blocks.transmitter.Transmitter;
 import ommina.biomediversity.blocks.transmitter.TransmitterContainer;
 
@@ -56,11 +58,13 @@ public class ModBlocks {
     @ObjectHolder( "receiver" ) public static Receiver RECEIVER;
     @ObjectHolder( "transmitter" ) public static Transmitter TRANSMITTER;
     @ObjectHolder( "plug_energy" ) public static PlugEnergy PLUG_ENERGY;
+    @ObjectHolder( "wither_essence_sapper" ) public static WitherEssenceSapper WITHER_ESSENCE_SAPPER;
 
     // Containers
     @ObjectHolder( "receiver" ) public static ContainerType<ReceiverContainer> RECEIVER_CONTAINER;
     @ObjectHolder( "plug_energy" ) public static ContainerType<PlugEnergyContainer> PLUG_ENERGY_CONTAINER;
     @ObjectHolder( "transmitter" ) public static ContainerType<TransmitterContainer> TRANSMITTER_CONTAINER;
+    @ObjectHolder( "wither_essence_sapper" ) public static ContainerType<WitherEssenceSapperContainer> WITHER_ESSENCE_SAPPER_CONTAINER;
 
     // Fluid Blocks  (Only those that we care about)
     @ObjectHolder( "mineralwater" ) public static FlowingFluidBlock MINERALWATER;
@@ -83,6 +87,11 @@ public class ModBlocks {
             BlockPos pos = data.readBlockPos();
             return new PlugEnergyContainer( windowId, BiomeDiversity.PROXY.getClientWorld(), pos, inv, BiomeDiversity.PROXY.getClientPlayer() );
         } ).setRegistryName( "plug_energy" ) );
+
+        event.getRegistry().register(IForgeContainerType.create((windowId, inv, data) -> {
+            BlockPos pos = data.readBlockPos();
+            return new WitherEssenceSapperContainer(windowId, BiomeDiversity.PROXY.getClientWorld(), pos, inv, BiomeDiversity.PROXY.getClientPlayer());
+        }).setRegistryName("wither_essence_sapper"));
 
     }
 
@@ -109,6 +118,7 @@ public class ModBlocks {
         register( event, "receiver", new Receiver() );
         register( event, "transmitter", new Transmitter() );
         register( event, "plug_energy", new PlugEnergy() );
+        register( event, "wither_essence_sapper", new WitherEssenceSapper() );
 
     }
 

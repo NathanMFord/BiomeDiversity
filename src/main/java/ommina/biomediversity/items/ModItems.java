@@ -39,6 +39,7 @@ public class ModItems {
     @ObjectHolder( "collector" ) public static Item COLLECTOR;
     @ObjectHolder( "plug_energy" ) public static Item PLUG_ENERGY;
     @ObjectHolder( "peltier" ) public static Item PELTIER;
+    @ObjectHolder( "wither_essence_sapper" ) public static Item WITHER_ESSENCE_SAPPER;
 
     // Cool Items
     @ObjectHolder( "linkstaff" ) public static Item LINK_STAFF;
@@ -53,6 +54,7 @@ public class ModItems {
     @ObjectHolder( "machine_battery" ) public static Item MACHINE_BATTERY;
     @ObjectHolder( "machine_sensor" ) public static Item MACHINE_SENSOR;
     @ObjectHolder( "machine_tank" ) public static Item MACHINE_TANK;
+    @ObjectHolder( "essence_sapper_base" ) public static Item ESSENCE_SAPPER_BASE; // does this go here????
 
     @SubscribeEvent
     public static void register( RegistryEvent.Register<Item> event ) {
@@ -80,6 +82,7 @@ public class ModItems {
         register( event, "machine_battery", new Item( new Item.Properties().group( BiomeDiversity.TAB ) ) );
         register( event, "machine_sensor", new Item( new Item.Properties().group( BiomeDiversity.TAB ) ) );
         register( event, "machine_tank", new Item( new Item.Properties().group( BiomeDiversity.TAB ) ) );
+        register( event, "essence_sapper_base", new Item( new Item.Properties().group( BiomeDiversity.TAB ) ) );
 
         register( event, "cluster_block_generic", new BlockItem( ModBlocks.CLUSTER_BLOCK_GENERIC, new Item.Properties().group( BiomeDiversity.TAB ) ) );
         register( event, "cluster_block_tank", new BlockItem( ModBlocks.CLUSTER_BLOCK_TANK, new Item.Properties().group( BiomeDiversity.TAB ) ) );
@@ -91,6 +94,7 @@ public class ModItems {
         register( event, "peltier", new BlockItem( ModBlocks.PELTIER, new Item.Properties().group( BiomeDiversity.TAB ) ) );
         register( event, "rainbarrel", new BlockItem( ModBlocks.RAIN_BARREL, new Item.Properties().group( BiomeDiversity.TAB ) ) );
         register( event, "plug_energy", new BlockItem( ModBlocks.PLUG_ENERGY, new Item.Properties().group( BiomeDiversity.TAB ) ) );
+        register( event, "wither_essence_sapper", new BlockItem( ModBlocks.WITHER_ESSENCE_SAPPER, new Item.Properties().group( BiomeDiversity.TAB ) ) );
 
     }
 
